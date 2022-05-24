@@ -1,0 +1,344 @@
+.navbar 
+{
+    background-color: rgb(26, 26, 26);
+    height: 46px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar__list
+{
+}
+.navbar__list-items
+{   
+    color: white;
+    height: 46px;
+    line-height: 46px;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    
+}
+.navbar__list--logo
+{
+    max-width: max-content;
+}
+.navbar__list-items-logo
+{   
+    margin: 0 6px;
+    padding-top: 10px;
+    height: 35px;
+    line-height: 46px
+}
+.navbar__list-items--separate
+{
+    border-right: 1px solid white;
+}
+.navbar__list-items-link
+{
+    text-decoration: none;
+    color: white;
+  
+}
+.navbar__list-items--language
+{
+    width: 105px;
+    height: 46px;
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    
+}
+.navbar__list-items--language:hover
+{
+    background-color: rgb(52, 52, 52);
+}
+.navbar__list-items--language:hover .navbar__list-items-menulanguage
+{
+ display: flex;
+}
+.navbar__list-items--signin
+{
+    width: 210px;
+    height: 46px;
+    /* border: 1px solid white; */
+    display: inline-flex;
+    justify-content:start;
+}
+.navbar__list-items--language-link>i
+{
+    padding-right: 10px;
+}
+.navbar__list-items--signin-link
+{
+    padding-left: 10px;
+}
+.navbar__list-items--signin-link >i
+{
+    padding-right: 10px;
+}
+
+/* menulanguage */
+
+.navbar__list-items-menulanguage
+{
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    display: none;
+    
+}
+
+.navbar__list-items-menulanguage-bnt
+{   
+    margin-left: 26px;
+    width: 77px;
+    text-decoration:none;
+    border: 1px solid rgb(26, 26, 26);
+    background-color: rgb(52, 52, 52);
+    color: white;
+    
+}
+
+.navbar__list-items > .navbar__list-items-link >.fa-chevron-up
+{
+    position: absolute;
+    left: 80%;
+    top:30%;
+    height: 20px;
+    display: none;    
+}
+.navbar__list-items--language:hover .navbar__list-items >.navbar__list-items-link >.fa-chevron-up
+{
+    display: block;
+}
+.navbar__list-items > .navbar__list-items-link >.fa-chevron-down
+{   
+    
+    position: absolute;
+    left: 80%;
+    top:30%;  
+}
+.navbar__list-items--language:hover .navbar__list-items >.navbar__list-items-link >.fa-chevron-down
+{
+    display: none;
+}
+
+
+.navbar__list-items-menulanguage-bnt--last
+{
+    border-radius: 0px 0px 5px 5px;
+}
+.sign-log 
+{
+    position: absolute;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 210px;
+    height: 300%;
+    background-color: rgb(52, 52, 52);
+    left: 0px;
+    display: none;
+    border-radius: 0px 0px 5px 5px;
+    
+}
+.sign-log__button:first-child
+{
+    border: 1px solid white;
+    color: white;
+    background-color: rgb(52, 52, 52);
+    border-radius: 25px;
+    padding: 15px 20px;
+    width: 180px;
+    
+}
+.sign-log__button:last-child
+{   
+    border-radius: 25px;
+    padding: 15px 20px;
+    width: 180px;
+    background-color: rgb(191, 1, 1);
+    color: white;
+}
+.sign-log__button:first-child:hover
+{
+    cursor: pointer;
+}
+.sign-log__button:last-child:hover
+{
+    background-color: rgb(146, 31, 31);;
+    cursor: pointer;
+}
+.navbar__list-items--signin
+{
+    margin-left: -4px;
+}
+.navbar__list-items--signin:hover
+{
+    background-color: rgb(52, 52, 52);
+}
+.navbar__list-items--signin:hover .sign-log 
+{
+    display: flex;
+}
+
+/* Top-search */
+.top-search
+{   
+    width: 100%;
+    height: 75px;
+    background-color: rgb(191, 1, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-search-left
+{
+    display: flex;
+}
+.top-search__items 
+{
+    display: inline-block;
+    line-height: 75px;
+    font-size: 20px;
+    font-weight:bold;
+    margin: 0 10px;
+    
+}
+.top-search__items:hover 
+{
+    border-bottom: 2px solid white;
+    box-sizing :border-box;
+}
+.top-search__items  > a 
+{
+    text-decoration: none;
+    color: white ;
+}
+.top-search__list--logo
+{   
+    
+    width: 100px;
+    height: 60px;
+    background-image: url(//assets.manutd.com/AssetPicker/images/0/0/3/2/197240/Header-Logo1500994616801.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 5px;
+    margin-left: 30px;
+}
+.top-search-right
+{   
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.top-search-right--icon 
+{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    
+}
+
+.top-search-right--icon:hover .search-modal 
+{
+    display: flex;
+} 
+.top-search-right--icon > i 
+{
+    margin-right: 10px;
+} 
+.top-search-right--img 
+{   
+    display: flex;
+    width: 140px;
+    height: 24px;
+    background-color: rgb(26, 26, 26);
+    border-radius: 5px;
+    justify-content: center;
+    
+}
+.top-search-right--img > a
+{
+    text-decoration: none;
+    color: white;
+    line-height: 24px;
+}
+.top-search-right--img>a>img
+{
+    height: 8px;
+    width: 42px;
+}
+.search-modal 
+{   
+    display: flex;
+    width: 100vw;
+    height: 100px;
+    border: 1px solid black;
+    position: absolute;
+    top: 250%;
+    left: -79vw;    
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    display: none;
+    
+}
+.search-modal::before
+{
+    content: "";
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    /* background-color: red; */
+    top:-40px;
+    left: 78%;
+}
+.search-modal__items
+{
+    margin: 0 20px;
+}
+.search-modal__items--input
+{
+    width: 75vw;
+    height: 60%;
+    border: 2px  solid rgb(122, 122, 194);
+    border-radius: 25px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+.search-modal__items--bnt-search
+{   
+    width: 7%;
+    height: 45%;
+    border-radius: 25px;
+}
+.search-modal__items--bnt-x
+{
+    width: 25px;
+    height: 25px;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    border-radius: 50%;  
+}
+
+
+/* container-page */
+.slide 
+{
+    width: 100%;
+    height: 80vh;
+    border: 1px solid black;
+    /* background-image: url(https://wallpapercave.com/wp/wp3293644.jpg);
+    background-size:100% 80vh; */
+}
+.slide__img 
+{
+    width: 100%;
+    height: 100%;
+}
