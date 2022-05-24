@@ -25,6 +25,6 @@ const slideImage = [
         
     }
 
-    setInterval(slideRandom,5000)
+    setInterval(slideRandom,3000)
 
   
