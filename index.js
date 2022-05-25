@@ -191,7 +191,7 @@ const slideImage = [
         const defendersPlayer = document.querySelector('.defenders')
         const midfieldersPlayer = document.querySelector('.midfielders')
         const forwardsPlayer = document.querySelector('.forwards')
-        console.log(goalKeeperPlayer)
+        
 
         function showPlayers(postion,postionArr)
 

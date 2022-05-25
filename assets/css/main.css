@@ -1,6 +1,7 @@
 .header {
     position: fixed;
     width: 100%;
+    
 }
 .navbar 
 {
@@ -336,6 +337,9 @@
 
 
 /* container-page */
+.container{
+    padding-top: 121px;
+}
 .slide 
 {
     width: 100%;
