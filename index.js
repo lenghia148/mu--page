@@ -289,8 +289,6 @@ const slideImage = [
         }
        }
        showShop(shopItems,shopItemsShow);
-
-
        //LOG IN
        let todoList =[];
        const logIN = document.querySelector(".sign-log__button--login")
@@ -298,21 +296,28 @@ const slideImage = [
        const users = document.querySelector(".users")
        const password = document.querySelector(".password")
        const submit = document.querySelector(".submit")
+       const signinName = document.querySelector(".navbar__list-items--signin-link")
         logIN.addEventListener('click', () => 
        {
             loginForm.style.display = "flex";
-       } )
-      
-
-       submit.addEventListener("hover" , () =>
-       {    
-            localStorage.setItem("personName",JSON.stringify({person:users.value, password:password.value}))
-            console.log(JSON.parse(localStorage.getItem("personName")));
-            todoList.push(JSON.parse(localStorage.getItem("personName")))
-            console.log(todoList);
        })
+      
+       let ojbPerson ;
+       submit.addEventListener("click" , function()
+       {    
+            localStorage.setItem("personName",JSON.stringify({person: users.value, password:password.value}));
+            todoList.push(JSON.parse(localStorage.getItem("personName"))) 
+            loginForm.style.display = "none"
+            signinName.innerText = `${users.value}`.toUpperCase()
+       }
+       )
 
+       function show()
+       {
+           console.log(todoList)
+       }
 
+    //    setInterval(show,3000)
 
      
        
