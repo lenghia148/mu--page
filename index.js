@@ -287,6 +287,32 @@ const slideImage = [
                 </div>
             </div>`
         }
-        
        }
        showShop(shopItems,shopItemsShow);
+
+
+       //LOG IN
+       let todoList =[];
+       const logIN = document.querySelector(".sign-log__button--login")
+       const loginForm = document.querySelector(".login-form ")
+       const users = document.querySelector(".users")
+       const password = document.querySelector(".password")
+       const submit = document.querySelector(".submit")
+        logIN.addEventListener('click', () => 
+       {
+            loginForm.style.display = "flex";
+       } )
+      
+
+       submit.addEventListener("hover" , () =>
+       {    
+            localStorage.setItem("personName",JSON.stringify({person:users.value, password:password.value}))
+            console.log(JSON.parse(localStorage.getItem("personName")));
+            todoList.push(JSON.parse(localStorage.getItem("personName")))
+            console.log(todoList);
+       })
+
+
+
+     
+       

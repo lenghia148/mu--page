@@ -689,3 +689,20 @@
     color: #a3a3a3;
     margin-right: 30px;
 }
+
+.login-form 
+{   
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 300%;
+    left: 45%; 
+    margin: auto;
+    display: none;
+
+}
