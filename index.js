@@ -274,13 +274,17 @@ const slideImage = [
         for(let i =0; i<items.length;i++)
         {
             shop.innerHTML += `<div class="shop__items" >
-            <a href=""><div class="shop__items--img" style="background-image:url(${items[i].itemsImg});" ></div></a>
+            <a href="">
+                <div class="shop__items--img" style="background-image:url(${items[i].itemsImg})">
+                    <a href="" class="cart-plus"><i class="fa-solid fa-cart-plus"></i></a>
+                </div>
+            </a>
             
-            <div class="shop__items--name">
-            <span class="shop__items--reduced"> Reduced: ${items[i].itemsReduced}</span>
-            <span class="shop__items--regular"> Regular: ${items[i].itemsRegular}</span>
-            <span>${items[i].itemsName}</span>
-            </div>
+                 <div class="shop__items--name">
+                    <span class="shop__items--reduced"> Reduced: ${items[i].itemsReduced}</span>
+                    <span class="shop__items--regular"> Regular: ${items[i].itemsRegular}</span>
+                    <span>${items[i].itemsName}</span>
+                </div>
             </div>`
         }
         
