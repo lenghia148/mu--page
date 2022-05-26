@@ -211,3 +211,78 @@ const slideImage = [
         showPlayers(midfieldersPlayer,midfielders);
         showPlayers(forwardsPlayer,forwards);
   
+        //shop
+
+        
+       const shopItems = 
+        [
+            {
+                itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-home-shirt-2021-22_ss4_p-12052601+u-at664r59yn8qgpq61tz1+v-206a8d38ca49417f845b1e6711c02106.jpg?_hv=1&w=340",
+                itemsReduced: "25$",
+                itemsRegular: "64$",
+                itemsName : "Manchester United Home Shirt 2021-22",
+            },
+            {
+                itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-home-shirt-2021-22-with-ronaldo-7-printing_ss4_p-12093042+u-oicxhbrseyxzlvk6sx92+v-be807a6e8fbf495fac17b4421e57f043.jpg?_hv=1&w=900",
+                itemsReduced: "40$",
+                itemsRegular: "79$",
+                itemsName : "Manchester United Home Shirt 2021-22 with Ronaldo 7 printing",
+            },
+            {
+                itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-third-shirt-2021-22_ss4_p-12052548+u-11j173tm5vq2ycw9fyvr+v-2f47135b2bc64b3a8d5cc4b1f32349ad.jpg?_hv=1&w=900",
+                itemsReduced: "25$",
+                itemsRegular: "64$",
+                itemsName : "Manchester United Third Shirt 2021-22",
+            },
+            {
+                itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-away-shirt-2021-22_ss4_p-12052603+u-b7sp7qmu31as2usy5man+v-765af7e8dd784446a6249a8959f37917.jpg?_hv=1&w=900",
+                itemsReduced: "40$",
+                itemsRegular: "79$",
+                itemsName : "Manchester United Cup Home Shirt 2021-22 with Ronaldo 7 printing",
+            },
+            {
+                itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-cup-home-shirt-2021-22-with-ronaldo-7-printing_ss4_p-12093052+u-1ep8mddmd2rktpu3u302+v-149c3800d6d049d1a7f7e375c48d3860.jpg?_hv=1&w=900",
+                itemsReduced: "25$",
+                itemsRegular: "64$",
+                itemsName : "Manchester United Home Shirt 2021-22",
+            },
+            // {
+            //     itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-away-shirt-2021-22-kids_ss4_p-12052547+u-11d5qeoiu7aa40hdm741+v-610317aacad740379f0bd105a0c06e0b.jpg?_hv=1&w=900",
+            //     itemsReduced: "20$",
+            //     itemsRegular: "49$",
+            //     itemsName : "Manchester United Away Shirt 2021-22-Kids",
+            // },
+            // {
+            //     itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-cup-third-shirt-2021-22-with-ronaldo-7-printing_ss4_p-12093058+u-1hjs4qhpgr3afx5fx00q+v-47c054dbd1cd45849b6d359094a81b04.jpg?_hv=1&w=900",
+            //     itemsReduced: "40$",
+            //     itemsRegular: "79$",
+            //     itemsName : "Manchester United Cup Third Shirt 2021-22 with Ronaldo 7 printing",
+            // },
+            // {
+            //     itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-home-shirt-2021-22-kids_ss4_p-12052529+u-vckymczol65lc48x06zt+v-dca95c842fe948599175a8ffc12edcd6.jpg?_hv=1&w=900",
+            //     itemsReduced: "22$",
+            //     itemsRegular: "49$",
+            //     itemsName : "Manchester United Home Shirt 2021-22-Kids",
+            // }
+          
+        ]
+        
+       const shopItemsShow = document.querySelector(".shop")
+
+       function showShop(items,shop)
+       {
+        for(let i =0; i<items.length;i++)
+        {
+            shop.innerHTML += `<div class="shop__items" >
+            <a href=""><div class="shop__items--img" style="background-image:url(${items[i].itemsImg});" ></div></a>
+            
+            <div class="shop__items--name">
+            <span class="shop__items--reduced"> Reduced: ${items[i].itemsReduced}</span>
+            <span class="shop__items--regular"> Regular: ${items[i].itemsRegular}</span>
+            <span>${items[i].itemsName}</span>
+            </div>
+            </div>`
+        }
+        
+       }
+       showShop(shopItems,shopItemsShow);

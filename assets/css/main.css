@@ -529,3 +529,136 @@
     margin-top: 20px;
     
 }
+
+
+/* shop */
+.shop 
+{   
+    margin-top:8vh;
+    height: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.shop__items
+{   
+    width: 305px;
+    height: 401Px;
+    margin: 0 20px;
+}
+.shop__items--img
+{
+    width: 270px;
+    height: 270px;
+    background-size: contain;
+}
+.shop__items--name 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.shop__items--reduced
+{
+    color: rgb(191, 1, 1);
+    font-size: larger;
+    margin-bottom: 5px;
+}
+.shop__items--regular
+{
+    font-size: larger;
+    margin-bottom: 5px;
+}
+
+
+/* footer */
+
+.footer-logo 
+{
+    height: 210px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0;
+}
+.footer-logo > img 
+{
+    width: 200px;
+    height: 200px;
+}
+.footer-bottom__listbnt
+{
+    height: 125px;
+    background-color: #2A2A2A;
+    width: 100%;
+}
+.footer-bottom__listbnt 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+
+.footer-bottom__listbnt >div
+{
+    width: 44px;
+    height: 44px;
+    background-color: #3f3f3f;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    
+}
+.footer-bottom__listbnt >div>a>i
+{
+    color: white;
+    font-size: 20px;
+    
+}
+
+.footer-bottom__listbnt>div:hover
+{
+    background-color: #c70101;
+}
+
+/* footer-bottom__end */
+.footer-bottom__end
+{
+    width: 100vw;
+    height: 44px;
+    background-color: #1a1a1a;
+    border-top: 01px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-bottom__end--items
+{   
+    flex: 4;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-bottom__end--items > a 
+{
+    margin: 0 3px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+}
+.footer-bottom__end--items > a:hover
+{
+    border-bottom: 1px solid white;
+}
+.footer-bottom__end>span
+{
+    display: flex;
+    justify-content: end;
+    flex: 3;
+    color: #a3a3a3;
+    margin-right: 30px;
+}
