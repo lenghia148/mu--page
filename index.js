@@ -216,35 +216,41 @@ const slideImage = [
         
        const shopItems = 
         [
-            {
+            {   itemsName : "Manchester United Home Shirt 2021-22",
                 itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-home-shirt-2021-22_ss4_p-12052601+u-at664r59yn8qgpq61tz1+v-206a8d38ca49417f845b1e6711c02106.jpg?_hv=1&w=340",
                 itemsReduced: "25$",
                 itemsRegular: "64$",
-                itemsName : "Manchester United Home Shirt 2021-22",
+                itemsAmount: 1,
+                
             },
-            {
+            {   
+                itemsName : "Manchester United Home Shirt 2021-22 with Ronaldo 7 printing",
                 itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-home-shirt-2021-22-with-ronaldo-7-printing_ss4_p-12093042+u-oicxhbrseyxzlvk6sx92+v-be807a6e8fbf495fac17b4421e57f043.jpg?_hv=1&w=900",
                 itemsReduced: "40$",
                 itemsRegular: "79$",
-                itemsName : "Manchester United Home Shirt 2021-22 with Ronaldo 7 printing",
+                itemsAmount: 1,
             },
-            {
+            {   
+                itemsName : "Manchester United Third Shirt 2021-22",
                 itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-third-shirt-2021-22_ss4_p-12052548+u-11j173tm5vq2ycw9fyvr+v-2f47135b2bc64b3a8d5cc4b1f32349ad.jpg?_hv=1&w=900",
                 itemsReduced: "25$",
                 itemsRegular: "64$",
-                itemsName : "Manchester United Third Shirt 2021-22",
+                itemsAmount: 1,
+                
             },
-            {
+            {   
+                itemsName : "Manchester United Cup Home Shirt 2021-22 with Ronaldo 7 printing",
                 itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-away-shirt-2021-22_ss4_p-12052603+u-b7sp7qmu31as2usy5man+v-765af7e8dd784446a6249a8959f37917.jpg?_hv=1&w=900",
                 itemsReduced: "40$",
                 itemsRegular: "79$",
-                itemsName : "Manchester United Cup Home Shirt 2021-22 with Ronaldo 7 printing",
+                itemsAmount: 1,
             },
-            {
+            {   
+                itemsName : "Manchester United Home Shirt 2021-22",
                 itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-cup-home-shirt-2021-22-with-ronaldo-7-printing_ss4_p-12093052+u-1ep8mddmd2rktpu3u302+v-149c3800d6d049d1a7f7e375c48d3860.jpg?_hv=1&w=900",
                 itemsReduced: "25$",
                 itemsRegular: "64$",
-                itemsName : "Manchester United Home Shirt 2021-22",
+                itemsAmount: 1,
             },
             // {
             //     itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-away-shirt-2021-22-kids_ss4_p-12052547+u-11d5qeoiu7aa40hdm741+v-610317aacad740379f0bd105a0c06e0b.jpg?_hv=1&w=900",
@@ -273,12 +279,12 @@ const slideImage = [
        {
         for(let i =0; i<items.length;i++)
         {
-            shop.innerHTML += `<div class="shop__items" >
-            <a href="">
+            shop.innerHTML += `<div class="shop__items id ="shop__items-${i}" >
+            
                 <div class="shop__items--img" style="background-image:url(${items[i].itemsImg})">
-                    <a href="" class="cart-plus"><i class="fa-solid fa-cart-plus"></i></a>
+                    <button class="cart-plus" id="cart-plus-${i}"><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
-            </a>
+            
             
                  <div class="shop__items--name">
                     <span class="shop__items--reduced"> Reduced: ${items[i].itemsReduced}</span>
@@ -317,7 +323,44 @@ const slideImage = [
            console.log(todoList)
        }
 
-    //    setInterval(show,3000)
+     //SHOP CART
+    
+     let shopCart = [];
+     let shopCartAmount = document.querySelector(".cart-shopping__amount")
+     let cartPlusBnt = document.querySelectorAll(".cart-plus")
+     let cartShop = document.querySelector(".cart-shopping")
+     console.log(cartPlusBnt);
 
+     function cartAmount()
+     {
+         shopCartAmount.innerText = shopCart.length;
+         
+     }
+     function showElemnet()
+     {
+         console.log(shopCart)
+     }
+
+     for (let i =0;i < cartPlusBnt.length;i++)
+        {
+            cartPlusBnt[i].addEventListener('click',() =>
+            {   
+                
+                var inShopCart = shopCart.some( function(element,index)
+                {   
+                    return element === shopItems[i]
+                })
+
+                if (inShopCart === false)
+                {shopCart.push(shopItems[i]);}
+               
+                
+            })
+        }
+     setInterval(cartAmount,100)
      
-       
+     
+
+
+
+
