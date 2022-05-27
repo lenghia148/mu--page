@@ -218,7 +218,7 @@ const slideImage = [
         [
             {   itemsName : "Manchester United Home Shirt 2021-22",
                 itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-home-shirt-2021-22_ss4_p-12052601+u-at664r59yn8qgpq61tz1+v-206a8d38ca49417f845b1e6711c02106.jpg?_hv=1&w=340",
-                itemsReduced: "25$",
+                itemsReduced: 25,
                 itemsRegular: "64$",
                 itemsAmount: 1,
                 
@@ -226,14 +226,14 @@ const slideImage = [
             {   
                 itemsName : "Manchester United Home Shirt 2021-22 with Ronaldo 7 printing",
                 itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-home-shirt-2021-22-with-ronaldo-7-printing_ss4_p-12093042+u-oicxhbrseyxzlvk6sx92+v-be807a6e8fbf495fac17b4421e57f043.jpg?_hv=1&w=900",
-                itemsReduced: "40$",
+                itemsReduced: 40,
                 itemsRegular: "79$",
                 itemsAmount: 1,
             },
             {   
                 itemsName : "Manchester United Third Shirt 2021-22",
                 itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-third-shirt-2021-22_ss4_p-12052548+u-11j173tm5vq2ycw9fyvr+v-2f47135b2bc64b3a8d5cc4b1f32349ad.jpg?_hv=1&w=900",
-                itemsReduced: "25$",
+                itemsReduced: 25,
                 itemsRegular: "64$",
                 itemsAmount: 1,
                 
@@ -241,14 +241,14 @@ const slideImage = [
             {   
                 itemsName : "Manchester United Cup Home Shirt 2021-22 with Ronaldo 7 printing",
                 itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-away-shirt-2021-22_ss4_p-12052603+u-b7sp7qmu31as2usy5man+v-765af7e8dd784446a6249a8959f37917.jpg?_hv=1&w=900",
-                itemsReduced: "40$",
+                itemsReduced: 40,
                 itemsRegular: "79$",
                 itemsAmount: 1,
             },
             {   
                 itemsName : "Manchester United Home Shirt 2021-22",
                 itemsImg : "https://images.footballfanatics.com/manchester-united/manchester-united-cup-home-shirt-2021-22-with-ronaldo-7-printing_ss4_p-12093052+u-1ep8mddmd2rktpu3u302+v-149c3800d6d049d1a7f7e375c48d3860.jpg?_hv=1&w=900",
-                itemsReduced: "25$",
+                itemsReduced: 25,
                 itemsRegular: "64$",
                 itemsAmount: 1,
             },
@@ -287,7 +287,7 @@ const slideImage = [
             
             
                  <div class="shop__items--name">
-                    <span class="shop__items--reduced"> Reduced: ${items[i].itemsReduced}</span>
+                    <span class="shop__items--reduced"> Reduced: ${items[i].itemsReduced}$</span>
                     <span class="shop__items--regular"> Regular: ${items[i].itemsRegular}</span>
                     <span>${items[i].itemsName}</span>
                 </div>
@@ -353,14 +353,82 @@ const slideImage = [
 
                 if (inShopCart === false)
                 {shopCart.push(shopItems[i]);}
-               
                 
             })
         }
      setInterval(cartAmount,100)
+    //  setInterval(showElemnet,3000)
      
+     //SHOPCART UI
+
+     const itemsShopCart = document.querySelector(".cartModal__listItems-products")
+     const closeShopCart = document.querySelector(".modal-navbar__close")
+     const openShopCart = document.querySelector(".cart-shopping")
+     const shopCartIU = document.querySelector(".cartModal")
+     const shopCartPayment =document.querySelector(".cartModal__listItems-payment")
      
 
+     closeShopCart.addEventListener("click",()=>
+     {
+         shopCartIU.style.display = "none";
+         itemsShopCart.innerHTML = "";
+     })
+     openShopCart.addEventListener("click",() =>
+     {
+        shopCartIU.style.display = "flex";
+        for (let i = 0; i < shopCart.length; i++) 
+        {
+            itemsShopCart.innerHTML += `<div class="itemsShopCart">
+                                        <div class="items-products__list" >
+                                            <div class="items-products--img" style="background-image:url(${shopCart[i].itemsImg})">
+                                            </div>
+                                            <div class="items-products--detail">
+                                                <div class="detail--name">${shopCart[i].itemsName}
+                                                </div>
+                                                <div class="detail--cost">${shopCart[i].itemsReduced}$
+                                                </div>
+                                                <a class="detail--remove" href="">Remove</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <input class="items-quantity" type="number" id="quantity-${i}" name="quantity" min="1"  value="1">
+                                        <div class="items-subtotal " ></div>
+                                        </div>`
+            shopCartPayment.innerHTML = `<div class="payment-box">
+                                    <span>SUBTOTAL: <span class="subtotal-payment"></span></span>
+                                    <span>TAX: <span  class="total-tax"></span></span>
+                                    <span>TOTAL:  <span class="total-payment"></span></span>
+                                    <button>PAYMENT</button>
+                              </div>`
+                                                                  
+            console.log(`${shopCart[i].itemsImg}`);
+        }
+        console.log(itemsShopCart);
+        console.log(shopCartPayment)  
+     })
 
+// SHOW SUBTOTAL
 
+let showSubtotal = document.querySelectorAll(".items-subtotal")
+let itemsQuanity = document.querySelectorAll(".items-quantity")
+setInterval(()=>
+{   
+    showSubtotal = document.querySelectorAll(".items-subtotal")
+    
+},10)
 
+setInterval(()=>
+{   
+    itemsQuanity = document.querySelectorAll(".items-quantity")
+    
+},10)
+
+ function showSubtotalInnerHTML()
+ {  
+    for(let i=0; i<shopCart.length;i++)
+    {
+        showSubtotal[i].innerText = `${shopCart[i].itemsReduced*itemsQuanity[i].value}$` ;
+    }
+ }
+
+ setInterval(showSubtotalInnerHTML,10)

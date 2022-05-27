@@ -1,3 +1,6 @@
+.main{
+    position: relative;
+}
 .header {
     position: fixed;
     z-index: 5;
@@ -345,6 +348,10 @@
     font-size:xx-large;
     color: white;
 }
+.cart-shopping:hover
+{
+    cursor: pointer;
+}
 .cart-shopping__amount
 {
     position: absolute;
@@ -361,6 +368,7 @@
     border-radius: 5px;
     top: -100%;
     left: 70%;
+    z-index: 2;
 
 }
 /* container-page */
@@ -597,6 +605,11 @@
     align-items: center;
     display: none;
 }
+.cart-plus:hover
+{
+    cursor: pointer;
+    opacity: 90%;
+}
 .cart-plus > i
 {
     font-size: large;
@@ -734,3 +747,188 @@
     display: none;
 
 }
+
+
+/* SHOP CART MODAL */
+
+.cartModal {
+    display: none; 
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100vw; /* Full width */
+    height: 100vh; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+  
+  /* Modal Content */
+  .modal-content {
+    
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    height: 95%;
+    border: 5px solid black;
+  }
+  .modal-navbar 
+  {     
+      height:  10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+  }
+  
+  .modal-navbar__list
+  {
+      
+      display: flex;
+      justify-content: flex-start;
+  }
+  .modal-navbar__close
+  {
+      
+      color: white;
+      width: 35px;
+      height: 35px;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5vw;
+      
+  }
+  .modal-navbar__list 
+  {     
+      margin-left: 10vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .modal-navbar__list >div
+  {
+    margin: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .modal-navbar__list >div:hover 
+  {
+      cursor: pointer;
+      color:rgb(191, 1, 1);
+
+  }
+  /* The Close Button */
+ 
+  .modal-navbar__close:hover
+  {
+    color:rgb(191, 1, 1);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .cartModal__listItems
+  {   
+
+      height: 95%;
+      width: 80%;
+      margin: 0 0 0 5%;
+      color: white;
+  }
+  .cartModal__listItems-title
+  {
+      height: 6%;
+      background-color: rgb(191, 1, 1);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  .title-products
+  {
+      display: flex;
+      justify-content: flex-start;
+      flex: 6;
+      margin-left: 5%;
+  }
+    .title-quantiny
+    {
+        flex: 1;
+    }
+    .title-subtotal
+    {
+        flex: 3;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .cartModal__listItems-products
+    {
+        width: 100%;
+        height: 65%;
+        overflow:scroll;
+        color: #000;
+    }
+    .itemsShopCart
+    {
+        display: flex;
+        justify-content: space-around;
+        margin: 30px 0;
+        padding: 10px;
+        border: 1px solid rgb(191, 1, 1);
+    }
+    .items-products__list
+    {   
+        flex: 6;
+        display: flex;
+    }
+    .items-products--img
+    {
+        height: 100px;
+        width: 100px;
+        background-size: cover;
+    }
+    .items-products--detail
+    {
+        width: 50%;
+        margin-left: 2%;
+    }
+    .items-quanity
+    {
+        flex:1 ;
+    }
+    .items-subtotal
+    {
+        flex: 3;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    /* PAYMENT */
+    .cartModal__listItems-payment
+    {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        height: 20%;
+        color: #000;
+        
+    }
+    .payment-box 
+    {   
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-top: 5px solid rgb(191, 1, 1);
+    }
+    

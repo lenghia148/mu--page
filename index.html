@@ -1,224 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/base.css" />
-    <link rel="stylesheet" href="./assets/css/main.css" />
-    <link
-      rel="stylesheet"
-      href="./assets/font/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    
-  </head>
-  <body>
-    <div class="main">
-      <header class="header">
-        <form class="login-form">
-          <label for="">user</label>
-          <input class="users" type="text">
-          <label for="">password</label>
-          <input class="password" type="password">
-          <button class="submit" type="button"> submit</button>
-        </form>
-        <nav class="navbar">
-          <ul class="navbar__list">
-            <li
-              class="navbar__list-items navbar__list-items--language navbar__list-items--separate"
-            >
-              <a
-                class="navbar__list-items-link navbar__list-items--language-link"
-                href=""
-              >
-                <i class="fa fa-globe"></i>EN
-                <i class="fa fa-chevron-up"></i>
-                <i class="fa fa-chevron-down"></i>
-              </a>
-              <div class="navbar__list-items-menulanguage">
-                <a href="" class="navbar__list-items-menulanguage-bnt">中文</a>
-                <a href="" class="navbar__list-items-menulanguage-bnt"
-                  >日本語</a
-                >
-                <a href="" class="navbar__list-items-menulanguage-bnt"
-                  >한국어</a
-                >
-                <a href="" class="navbar__list-items-menulanguage-bnt"
-                  >العربية</a
-                >
-                <a
-                  href=""
-                  class="navbar__list-items-menulanguage-bnt navbar__list-items-menulanguage-bnt--last"
-                  >Español</a
-                >
-              </div>
-            </li>
-            <li class="navbar__list-items navbar__list-items--signin">
-              <a
-                class="navbar__list-items--signin-link navbar__list-items-link"
-                href=""
-                ><i class="fa fa-user"></i>Sign In</a
-              >
-              <div class="sign-log">
-                <button class="sign-log__button sign-log__button--login">LOG IN</button>
-                <button class="sign-log__button sign-log__button--signup">SIGN UP</button>
-              </div>
-            </li>
-          </ul>
-          <ul class="navbar__list navbar__list--logo">
-            <li class="navbar__list-items">
-              <img
-                class="navbar__list-items-logo"
-                src="https://assets.manutd.com/AssetPicker/images/0/0/11/53/734543/Adidas_Comp_DarkBG_180xAuto1547460200382.png"
-                alt=""
-              />
-            </li>
-            <li class="navbar__list-items">
-              <img
-                class="navbar__list-items-logo"
-                src="https://assets.manutd.com/AssetPicker/images/0/0/15/56/997598/TeamViewer-logo-white-header1625085576209.png"
-                alt=""
-              />
-            </li>
-            <li class="navbar__list-items">
-              <img
-                class="navbar__list-items-logo"
-                src="https://assets.manutd.com/AssetPicker/images/0/0/16/73/1067276/TezosLogo_Horizontal_White1644483074005.png"
-                alt=""
-              />
-            </li>
-            <li class="navbar__list-items">
-              <img
-                class="navbar__list-items-logo"
-                src="https://assets.manutd.com/AssetPicker/images/0/0/11/53/734573/Kohler_Comp_DarkBG_180xAuto1547470584246.png"
-                alt=""
-              />
-            </li>
-          </ul>
-        </nav>
-        <div class="top-search">
-          <div class="top-search-left">
-            <div class="top-search__list top-search__list--logo"></div>
-            <ul class="top-search__list">
-              <li class="top-search__items"><a href="">MY UNITED</a></li>
-              <li class="top-search__items"><a href="">FIRST TEAM</a></li>
-              <li class="top-search__items"><a href="">MANAGER</a></li>
-              <li class="top-search__items"><a href="">SHOP</a></li>
-            </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/css/base.css" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+  <link rel="stylesheet" href="./assets/font/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+</head>
+
+<body>
+  <div class="main">
+    <div id="cartModal" class="cartModal">
+      <div class="modal-content">
+        <div class="modal-navbar">
+          <div class="modal-navbar__list">
+            <div class="modal-navbar__items">Home</div>
+            <div class="modal-navbar__items">Products</div>
+            <div class="modal-navbar__items">About</div>
+            <div class="modal-navbar__items">Contact</div>
           </div>
-          <div class="top-search-right">
-            <div class="top-search__list top-search-right--icon">
-              <a class="top-search-right--icon" href="">
-                <i class="fa fa-magnifying-glass"></i>
-                Search
-              </a>
-              <div class="search-modal">
-                <input
-                  class="search-modal__items search-modal__items--input"
-                  placeholder="WHAT ARE YOU LOOKING FOR?"
-                  type="text"
-                  name=""
-                  id=""
-                />
-                <button
-                  class="search-modal__items search-modal__items--bnt-search"
-                >
-                  SEARCH
-                </button>
-                <button class="search-modal__items search-modal__items--bnt-x">
-                  X
-                </button>
-              </div>
-            </div>
-            <div class="top__search--list top-search-right--shopcard">
-              <a class="cart-shopping" href=""><i class="fa-solid fa-cart-shopping">
-                
-              </i><div class="cart-shopping__amount"></div></a>
-            </div>
-            <div class="top-search__list top-search-right--img">
-              <a href="">
-                <span>Powered by</span>
-                <img
-                  class="top-search-right--img-hlc"
-                  src="https://assets.manutd.com/AssetPicker/images/0/0/11/53/734569/HCL_Comp_DarkBG_180xAuto1547462086653.png"
-                  alt=""
-                />
-              </a>
-            </div>
+          <button class="modal-navbar__close">&times;</button>
+        </div>
+        <div class="cartModal__listItems">
+          <div class="cartModal__listItems-title">
+            <span class="title-products">Product</span>
+            <span class="title-quantiny">Quantiny</span>
+            <span class="title-subtotal">Subtotal</span>
           </div>
-      </header>
-    </div>
-      <div class="container">
-          <div class="slide" >
-              <img class="slide__img" src="//assets.manutd.com/AssetPicker/images/0/0/10/168/698393/JP_541528114708571_xlarge.jpg" alt="">
-          </div>
-          <div class="first-team">
-                <div class="goolkeeper__title"><h1>GOALKEEPERS</h1> <hr></div>
-                <div class="goalkeepers">  
-                </div>
-                <div class="defenders__title"><h1>DEFENDERS</h1> <hr></div>
-                <div class="defenders" ></div>
-                <div class="midfielders__title"><h1>MIDFIELDERS</h1> <hr></div>
-                <div class="midfielders"></div>
-                <div class="forwards__title"><h1>FORWARDS</h1> <hr></div>
-                <div class="forwards"></div>
-          </div>
-            <div class="manager">
-              <div class="manager-left">
-                <div class="manager__title"><h1>MANAGER</h1></div>
-                <div class="manager__name"><span>NAME</span>OLE GUNNAR <br> SOLSKJAER</div>
-                <div class="manager__birth"><span>DATE OF BIRTH</span>26 Feb 1973</div>
-                <div class="manager__country"><span>COUNTRY</span> <span class="manager__country-flag"> <img src="https://thekingincatsle.github.io/Manchester-United-website/pic/Nationality/norway.png" alt="">  Norwegian</span></div>
-                
-              </div>
-             
-              <div class="manager__img"><img src="https://resources.premierleague.com/premierleague/photos/players/250x250/man40342.png" alt=""></div>
-              <div class="manager__quote">"BEING GIVEN THE OPPORTUNITY TO MOVE THE CLUB FORWARD WITH ALL ITS POTENTIAL IS FANTASTIC</div>
-            
-          </div>
-          <div class="shop-title"><h1>SHOP</h1> <hr></div>
-          <div class="shop">
-            
-          </div>
+
+          <div class="cartModal__listItems-products"></div>
+          <div class="cartModal__listItems-payment"></div>
+        </div>
       </div>
-      <footer class="footer">
-        <div class="footer-logo">
-          <img src="https://store.manutd.com/content/ws/146296/e_spot_brands_adidas.jpg" alt="">
-          <img src="https://store.manutd.com/content/ws/all/fc1a3302-db41-4cb9-a339-82dd3ed8b859__267X267.jpg" alt="">
-          <img src="https://store.manutd.com/content/ws/146296/e_spot_brands_new_era.jpg" alt="">
-          <img src="https://store.manutd.com/content/ws/213271/e_spot_brands_paul_smith.jpg" alt="">
-          <img src="https://store.manutd.com/content/ws/213271/e_spot_brands_remington.jpg" alt="">
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-bottom__listbnt">
-              <div><a href=""><i class="fa-brands fa-youtube"></i></a></div>
-              <div><a href=""><i class="fa-brands fa-facebook"></i></a></div>
-              <div><a href=""><i class="fa-brands fa-twitter"></i></a></div>
-              <div><a href=""><i class="fa-brands fa-instagram"></i></a></div>
-              <div><a href=""><i class="fa-brands fa-tiktok"></i></a></div>
-            </div>
-            <div class="footer-bottom__end">
-              <div class="footer-bottom__end--items">
-              <a href="">Download the Official App</a>
-              <a href="">Accessibility</a>
-              <a href="">Contact Us</a>
-              <a href="">Jobs & Careers</a>
-              <a href="">Privacy</a>
-              <a href="">Cookies</a>
-              <a href="">Terms Of Use</a>
-              <a href="">Terms & Conditions of Sale</a>
-              <a href="">Anti-slavery</a>
-            </div>
-              <span>©2022 Manchester United FC Ltd</span>
-            </div>
-        </div>
-      </footer>
-      <script src="./index.js"></script>
     </div>
-  </body>
+    <header class="header">
+      <!-- shop cart modal -->
+
+      <!-- login modal -->
+      <form class="login-form">
+        <label for="">user</label>
+        <input class="users" type="text">
+        <label for="">password</label>
+        <input class="password" type="password">
+        <button class="submit" type="button"> submit</button>
+      </form>
+      <nav class="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__list-items navbar__list-items--language navbar__list-items--separate">
+            <a class="navbar__list-items-link navbar__list-items--language-link" href="">
+              <i class="fa fa-globe"></i>EN
+              <i class="fa fa-chevron-up"></i>
+              <i class="fa fa-chevron-down"></i>
+            </a>
+            <div class="navbar__list-items-menulanguage">
+              <a href="" class="navbar__list-items-menulanguage-bnt">中文</a>
+              <a href="" class="navbar__list-items-menulanguage-bnt">日本語</a>
+              <a href="" class="navbar__list-items-menulanguage-bnt">한국어</a>
+              <a href="" class="navbar__list-items-menulanguage-bnt">العربية</a>
+              <a href=""
+                class="navbar__list-items-menulanguage-bnt navbar__list-items-menulanguage-bnt--last">Español</a>
+            </div>
+          </li>
+          <li class="navbar__list-items navbar__list-items--signin">
+            <a class="navbar__list-items--signin-link navbar__list-items-link" href=""><i class="fa fa-user"></i>Sign
+              In</a>
+            <div class="sign-log">
+              <button class="sign-log__button sign-log__button--login">LOG IN</button>
+              <button class="sign-log__button sign-log__button--signup">SIGN UP</button>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar__list navbar__list--logo">
+          <li class="navbar__list-items">
+            <img class="navbar__list-items-logo"
+              src="https://assets.manutd.com/AssetPicker/images/0/0/11/53/734543/Adidas_Comp_DarkBG_180xAuto1547460200382.png"
+              alt="" />
+          </li>
+          <li class="navbar__list-items">
+            <img class="navbar__list-items-logo"
+              src="https://assets.manutd.com/AssetPicker/images/0/0/15/56/997598/TeamViewer-logo-white-header1625085576209.png"
+              alt="" />
+          </li>
+          <li class="navbar__list-items">
+            <img class="navbar__list-items-logo"
+              src="https://assets.manutd.com/AssetPicker/images/0/0/16/73/1067276/TezosLogo_Horizontal_White1644483074005.png"
+              alt="" />
+          </li>
+          <li class="navbar__list-items">
+            <img class="navbar__list-items-logo"
+              src="https://assets.manutd.com/AssetPicker/images/0/0/11/53/734573/Kohler_Comp_DarkBG_180xAuto1547470584246.png"
+              alt="" />
+          </li>
+        </ul>
+      </nav>
+      <div class="top-search">
+        <div class="top-search-left">
+          <div class="top-search__list top-search__list--logo"></div>
+          <ul class="top-search__list">
+            <li class="top-search__items"><a href="">MY UNITED</a></li>
+            <li class="top-search__items"><a href="">FIRST TEAM</a></li>
+            <li class="top-search__items"><a href="">MANAGER</a></li>
+            <li class="top-search__items"><a href="">SHOP</a></li>
+          </ul>
+        </div>
+        <div class="top-search-right">
+          <div class="top-search__list top-search-right--icon">
+            <a class="top-search-right--icon" href="">
+              <i class="fa fa-magnifying-glass"></i>
+              Search
+            </a>
+            <div class="search-modal">
+              <input class="search-modal__items search-modal__items--input" placeholder="WHAT ARE YOU LOOKING FOR?"
+                type="text" name="" id="" />
+              <button class="search-modal__items search-modal__items--bnt-search">
+                SEARCH
+              </button>
+              <button class="search-modal__items search-modal__items--bnt-x">
+                X
+              </button>
+            </div>
+          </div>
+          <div class="top__search--list top-search-right--shopcard">
+            <a class="cart-shopping" ><i class="fa-solid fa-cart-shopping"></i>
+              <div class="cart-shopping__amount">0</div>
+            </a>
+          </div>
+          <div class="top-search__list top-search-right--img">
+            <a href="">
+              <span>Powered by</span>
+              <img class="top-search-right--img-hlc"
+                src="https://assets.manutd.com/AssetPicker/images/0/0/11/53/734569/HCL_Comp_DarkBG_180xAuto1547462086653.png"
+                alt="" />
+            </a>
+          </div>
+        </div>
+    </header>
+  </div>
+  <div class="container">
+    <div class="slide">
+      <img class="slide__img"
+        src="//assets.manutd.com/AssetPicker/images/0/0/10/168/698393/JP_541528114708571_xlarge.jpg" alt="">
+    </div>
+    <div class="first-team">
+      <div class="goolkeeper__title">
+        <h1>GOALKEEPERS</h1>
+        <hr>
+      </div>
+      <div class="goalkeepers">
+      </div>
+      <div class="defenders__title">
+        <h1>DEFENDERS</h1>
+        <hr>
+      </div>
+      <div class="defenders"></div>
+      <div class="midfielders__title">
+        <h1>MIDFIELDERS</h1>
+        <hr>
+      </div>
+      <div class="midfielders"></div>
+      <div class="forwards__title">
+        <h1>FORWARDS</h1>
+        <hr>
+      </div>
+      <div class="forwards"></div>
+    </div>
+    <div class="manager">
+      <div class="manager-left">
+        <div class="manager__title">
+          <h1>MANAGER</h1>
+        </div>
+        <div class="manager__name"><span>NAME</span>OLE GUNNAR <br> SOLSKJAER</div>
+        <div class="manager__birth"><span>DATE OF BIRTH</span>26 Feb 1973</div>
+        <div class="manager__country"><span>COUNTRY</span> <span class="manager__country-flag"> <img
+              src="https://thekingincatsle.github.io/Manchester-United-website/pic/Nationality/norway.png" alt="">
+            Norwegian</span></div>
+
+      </div>
+
+      <div class="manager__img"><img
+          src="https://resources.premierleague.com/premierleague/photos/players/250x250/man40342.png" alt=""></div>
+      <div class="manager__quote">"BEING GIVEN THE OPPORTUNITY TO MOVE THE CLUB FORWARD WITH ALL ITS POTENTIAL IS
+        FANTASTIC</div>
+
+    </div>
+    <div class="shop-title">
+      <h1>SHOP</h1>
+      <hr>
+    </div>
+    <div class="shop">
+
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-logo">
+      <img src="https://store.manutd.com/content/ws/146296/e_spot_brands_adidas.jpg" alt="">
+      <img src="https://store.manutd.com/content/ws/all/fc1a3302-db41-4cb9-a339-82dd3ed8b859__267X267.jpg" alt="">
+      <img src="https://store.manutd.com/content/ws/146296/e_spot_brands_new_era.jpg" alt="">
+      <img src="https://store.manutd.com/content/ws/213271/e_spot_brands_paul_smith.jpg" alt="">
+      <img src="https://store.manutd.com/content/ws/213271/e_spot_brands_remington.jpg" alt="">
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom__listbnt">
+        <div><a href=""><i class="fa-brands fa-youtube"></i></a></div>
+        <div><a href=""><i class="fa-brands fa-facebook"></i></a></div>
+        <div><a href=""><i class="fa-brands fa-twitter"></i></a></div>
+        <div><a href=""><i class="fa-brands fa-instagram"></i></a></div>
+        <div><a href=""><i class="fa-brands fa-tiktok"></i></a></div>
+      </div>
+      <div class="footer-bottom__end">
+        <div class="footer-bottom__end--items">
+          <a href="">Download the Official App</a>
+          <a href="">Accessibility</a>
+          <a href="">Contact Us</a>
+          <a href="">Jobs & Careers</a>
+          <a href="">Privacy</a>
+          <a href="">Cookies</a>
+          <a href="">Terms Of Use</a>
+          <a href="">Terms & Conditions of Sale</a>
+          <a href="">Anti-slavery</a>
+        </div>
+        <span>©2022 Manchester United FC Ltd</span>
+      </div>
+    </div>
+  </footer>
+  <script src="./index.js"></script>
+  </div>
+</body>
+
 </html>
