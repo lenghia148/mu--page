@@ -374,11 +374,12 @@ const slideImage = [
          itemsShopCart.innerHTML = "";
      })
      openShopCart.addEventListener("click",() =>
-     {
+     {  
+        paymentBnt = document.querySelector(".payment-button")
         shopCartIU.style.display = "flex";
         for (let i = 0; i < shopCart.length; i++) 
         {
-            itemsShopCart.innerHTML += `<div class="itemsShopCart">
+            itemsShopCart.innerHTML += `<div class="itemsShopCart itemsShopCart-all ">
                                         <div class="items-products__list" >
                                             <div class="items-products--img" style="background-image:url(${shopCart[i].itemsImg})">
                                             </div>
@@ -387,7 +388,7 @@ const slideImage = [
                                                 </div>
                                                 <div class="detail--cost">${shopCart[i].itemsReduced}$
                                                 </div>
-                                                <a class="detail--remove" href="">Remove</a>
+                                                <a class="detail--remove" onclick="removeItems(${i})" >Remove</a>
                                             </div>
                                         </div>
                                         
@@ -395,10 +396,10 @@ const slideImage = [
                                         <div class="items-subtotal " ></div>
                                         </div>`
             shopCartPayment.innerHTML = `<div class="payment-box">
-                                    <span>SUBTOTAL: <span class="subtotal-payment"></span></span>
-                                    <span>TAX: <span  class="total-tax"></span></span>
-                                    <span>TOTAL:  <span class="total-payment"></span></span>
-                                    <button>PAYMENT</button>
+                                    <div class="payment-box__items subtotal-payment"> SUBTOTAL: </div>
+                                    <div class="payment-box__items total-tax">TAX:</div>
+                                    <div class="payment-box__items total-payment">TOTAL: </div>
+                                    <button class="payment-box__items payment-button-clm" onclick="myFunction()">PAYMENT</button>
                               </div>`
                                                                   
             console.log(`${shopCart[i].itemsImg}`);
@@ -411,17 +412,18 @@ const slideImage = [
 
 let showSubtotal = document.querySelectorAll(".items-subtotal")
 let itemsQuanity = document.querySelectorAll(".items-quantity")
+
 setInterval(()=>
 {   
     showSubtotal = document.querySelectorAll(".items-subtotal")
     
-},10)
+},1000)
 
 setInterval(()=>
 {   
     itemsQuanity = document.querySelectorAll(".items-quantity")
     
-},10)
+},1000)
 
  function showSubtotalInnerHTML()
  {  
@@ -431,4 +433,102 @@ setInterval(()=>
     }
  }
 
- setInterval(showSubtotalInnerHTML,10)
+ setInterval(showSubtotalInnerHTML,1000)
+
+ //SHOW ShopCartPayment
+
+ let finalSubtotal = document.querySelector(".subtotal-payment")
+  let taxPayment = document.querySelector(".total-tax")
+  let totalPayment = document.querySelector('.total-payment')
+ setInterval(()=>
+{   
+    finalSubtotal = document.querySelector(".subtotal-payment")
+    
+    
+},5000)
+
+setInterval(()=>
+{   
+    taxPayment = document.querySelector(".total-tax")
+    
+    
+},5000)
+setInterval(()=>
+{   
+    totalPayment = document.querySelector(".total-payment")
+    
+    
+},5000)
+
+function showFinalSubtotalInnerHTML()
+{  
+    let finalSubtotalCost = 0; 
+   for( let i=0; i<shopCart.length;i++)
+   {    
+       
+       finalSubtotalCost += shopCart[i].itemsReduced*itemsQuanity[i].value;
+       
+
+   }
+   finalSubtotal.innerText = `SUBTOTAL:              ${finalSubtotalCost}$`;
+   taxPayment.innerText = `TAX: ${finalSubtotalCost/100*5}$`
+   totalPayment.innerText = `TOTAL: ${finalSubtotalCost+finalSubtotalCost/100*5}$ `
+   
+}
+setInterval(showFinalSubtotalInnerHTML,1000)
+
+let paymentBnt = document.querySelector(".payment-button-clm")
+
+setInterval(()=>
+{   
+    paymentBnt = document.querySelector(".payment-button-clm")
+    // console.log(paymentBnt);
+    
+},5000)
+
+
+function myFunction()
+{
+    console.log("dit me may")
+    shopCartIU.style.display = "none";
+    shopCart = [];
+    alert("THANKS FOR PAYMENT");
+}
+
+let removeBnt = document.querySelectorAll(".detail--remove")
+
+setInterval(()=>
+{   
+    removeBnt = document.querySelectorAll(".detail--remove")
+    
+    
+},5000)
+
+let itemsShopCartAll = document.querySelectorAll(".itemsShopCart-all")
+
+setInterval(()=>
+{   
+    itemsShopCartAll = document.querySelectorAll(".itemsShopCart-all");
+    console.log(itemsShopCartAll);
+    console.log(shopCart);
+    
+    
+},1000)
+
+function removeItems(index)
+{
+   shopCart.splice(index,1);
+   itemsShopCartAll[index].remove();
+  
+}
+
+function noItems()
+{
+     if(itemsShopCartAll.length === 0 )
+    {
+     shopCartIU.style.display = "none";
+    }
+     
+}
+
+setInterval(noItems,5000)

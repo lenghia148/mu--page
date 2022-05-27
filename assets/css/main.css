@@ -872,7 +872,7 @@
     .cartModal__listItems-products
     {
         width: 100%;
-        height: 65%;
+        height: 60%;
         overflow:scroll;
         color: #000;
     }
@@ -927,8 +927,18 @@
     {   
         width: 40%;
         display: flex;
+        
         flex-direction: column;
         justify-content: flex-start;
         border-top: 5px solid rgb(191, 1, 1);
     }
-    
+    .payment-box__items
+    {
+        font-size: medium;
+        font-weight: bolder;
+        margin: 3px 0;
+    }
+    .detail--remove:hover 
+    {
+        cursor: pointer;
+    }
