@@ -282,7 +282,7 @@ const slideImage = [
             shop.innerHTML += `<div class="shop__items id ="shop__items-${i}" >
             
                 <div class="shop__items--img" style="background-image:url(${items[i].itemsImg})">
-                    <button class="cart-plus" id="cart-plus-${i}"><i class="fa-solid fa-cart-plus"></i></button>
+                    <button class="cart-plus" id="cart-plus-${i}"><span>ADD SHOPCART</span><i class="fa-solid fa-cart-plus"></i></button>
                 </div>
             
             
