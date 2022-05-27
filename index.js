@@ -445,20 +445,20 @@ setInterval(()=>
     finalSubtotal = document.querySelector(".subtotal-payment")
     
     
-},5000)
+},1000)
 
 setInterval(()=>
 {   
     taxPayment = document.querySelector(".total-tax")
     
     
-},5000)
+},1000)
 setInterval(()=>
 {   
     totalPayment = document.querySelector(".total-payment")
     
     
-},5000)
+},1000)
 
 function showFinalSubtotalInnerHTML()
 {  
@@ -519,7 +519,33 @@ function removeItems(index)
 {
    shopCart.splice(index,1);
    itemsShopCartAll[index].remove();
+   itemsShopCart.innerHTML="";
+   for (let i = 0; i < shopCart.length; i++) 
+        {
+            itemsShopCart.innerHTML += `<div class="itemsShopCart itemsShopCart-all ">
+                                        <div class="items-products__list" >
+                                            <div class="items-products--img" style="background-image:url(${shopCart[i].itemsImg})">
+                                            </div>
+                                            <div class="items-products--detail">
+                                                <div class="detail--name">${shopCart[i].itemsName}
+                                                </div>
+                                                <div class="detail--cost">${shopCart[i].itemsReduced}$
+                                                </div>
+                                                <a class="detail--remove" onclick="removeItems(${i})" >Remove</a>
+                                            </div>
+                                        </div>
+                                        
+                                        <input class="items-quantity" type="number" id="quantity-${i}" name="quantity" min="1"  value="1">
+                                        <div class="items-subtotal " ></div>
+                                        </div>`
+            shopCartPayment.innerHTML = `<div class="payment-box">
+                                    <div class="payment-box__items subtotal-payment"> SUBTOTAL: </div>
+                                    <div class="payment-box__items total-tax">TAX:</div>
+                                    <div class="payment-box__items total-payment">TOTAL: </div>
+                                    <button class="payment-box__items payment-button-clm" onclick="myFunction()">PAYMENT</button>
+                              </div>`
   
+}
 }
 
 function noItems()
@@ -531,5 +557,5 @@ function noItems()
      
 }
 
-setInterval(noItems,5000)
+setInterval(noItems,2000)
 
