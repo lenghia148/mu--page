@@ -3,15 +3,8 @@
     margin: 0;
     box-sizing: border-box;
 }
-.main 
-{   
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-.main > h2 {
+
+.signupmodal-content > h2 {
     width: 100%;
     display: flex;
     justify-content: center;

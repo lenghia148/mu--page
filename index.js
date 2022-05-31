@@ -295,33 +295,9 @@ const slideImage = [
         }
        }
        showShop(shopItems,shopItemsShow);
-       //LOG IN
-       let todoList =[];
-       const logIN = document.querySelector(".sign-log__button--login")
-       const loginForm = document.querySelector(".login-form ")
-       const users = document.querySelector(".users")
-       const password = document.querySelector(".password")
-       const submit = document.querySelector(".submit")
-       const signinName = document.querySelector(".navbar__list-items--signin-link")
-        logIN.addEventListener('click', () => 
-       {
-            loginForm.style.display = "flex";
-       })
-      
-       let ojbPerson ;
-       submit.addEventListener("click" , function()
-       {    
-            localStorage.setItem("personName",JSON.stringify({person: users.value, password:password.value}));
-            todoList.push(JSON.parse(localStorage.getItem("personName"))) 
-            loginForm.style.display = "none"
-            signinName.innerText = `${users.value}`.toUpperCase()
-       }
-       )
+       
+    
 
-       function show()
-       {
-           console.log(todoList)
-       }
 
      //SHOP CART
     
@@ -489,7 +465,7 @@ setInterval(()=>
 
 function myFunction()
 {
-    console.log("dit me may")
+    
     shopCartIU.style.display = "none";
     shopCart = [];
     alert("THANKS FOR PAYMENT");
@@ -558,4 +534,5 @@ function noItems()
 }
 
 setInterval(noItems,2000)
+
 

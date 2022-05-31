@@ -10,11 +10,40 @@
   <link rel="stylesheet" href="./assets/css/main.css" />
   <link rel="stylesheet" href="./assets/font/fontawesome-free-6.1.1-web/fontawesome-free-6.1.1-web/css/all.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./assets/css/signup.css">
 
 </head>
 
 <body>
   <div class="main">
+    <!-- //signup -->
+    <div class="signupmodal">
+      <div class="signupmodal-content">
+      <button class="signupmodal__close">&times;</button>
+      <h2  >SIGN FOR UNITED</h2>
+      <h6 class="sign-h6">Already have an account? You can also use your MUTV</h6>
+      <p class="sign-p">account details to<a href="">Sign in</a></p>
+      <div class="last">My United is your personal profile and includes access to exclusive content and competitions.</div>
+      <label for="">Name</label>
+      <input class="form-control users-name"  type="text" name="" id="">
+      <div class="check-name"></div>
+      <label for="">User name</label>
+      
+      <input class="form-control users-id" type="text"  >
+      <div class="check-user-name"></div>
+      <label  for="">Password</label>
+      
+      <input class="form-control users-password" type="password" name="" id="">
+      <div class="check-password"></div>
+      <label  for="">Confirm password</label>
+      
+      <input class="form-control confirm-password" type="password" name="" id="">
+      <div class="check-confirm"></div>
+      <button class="btn btn-danger singup-bnt">SIGN FOR UNIED</button>
+      <div class="check-all"></div>
+     </div>
+     </div>
+     <!-- //cardmodal -->
     <div id="cartModal" class="cartModal">
       <div class="modal-content">
         <div class="modal-navbar">
@@ -42,13 +71,7 @@
       <!-- shop cart modal -->
 
       <!-- login modal -->
-      <form class="login-form">
-        <label for="">user</label>
-        <input class="users" type="text">
-        <label for="">password</label>
-        <input class="password" type="password">
-        <button class="submit" type="button"> submit</button>
-      </form>
+
       <nav class="navbar">
         <ul class="navbar__list">
           <li class="navbar__list-items navbar__list-items--language navbar__list-items--separate">
@@ -229,7 +252,8 @@
       </div>
     </div>
   </footer>
-  <script src="./index.js"></script>
+  <script src="./signup.js"></script>
+  <!-- <script src="./index.js"></script> -->
   </div>
 </body>
 
