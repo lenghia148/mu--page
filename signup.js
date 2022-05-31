@@ -12,6 +12,17 @@
     let checkAll = document.querySelector(".check-all")
     let signUp = document.querySelector(".singup-bnt")
     let checkName  = document.querySelector(".check-name")
+    let signUpButton = document.querySelector(".sign-log__button--signup")
+    console.log(signUpButton);
+    
+    signUpButton.addEventListener("click",()=>
+    {
+        modalSignUp.style.display ="block" ;
+    })
+    
+
+
+
     console.log(modalSignUp);
     console.log(userId.value.length);
     console.log(checkid);
@@ -77,15 +88,16 @@
 
     confirmPass.addEventListener("change",() =>
     {
-        if(userPass.value===confirmPass.value)
+        if(userPass.value!=confirmPass.value)
             {
-                check3 =1;
-                confirmpassword.style.display = "none"
+                confirmpassword.innerText =`Confirmpass is't like password `
+            check3=0;
+               
             }
         else
         {
-            confirmpassword.innerHTML =`<span>confirmPass is't like password </span>`
-            check3=0;
+            check3 =1;
+            confirmpassword.style.display = "none"
         }
     })
 
@@ -97,11 +109,61 @@
                 user : userId.value,
                 pass : userPass.value,
             })
-            console.log(userPerson);
             modalSignUp.style.display = "none";
+            console.log(userPerson);
         }
         else 
         {
             checkAll.innerHTML ="<span>something wrong</span>"
         }
+    })
+
+
+
+    // LOG IN
+    let logInModalClose = document.querySelector(".loginmodal__close")
+    let logInModal = document.querySelector(".loginmodal")
+    let logInUsersId= document.querySelector(".login-users-id")
+    let logInUserPass= document.querySelector(".login-users-password")
+    let checkAllLogIn = document.querySelector(".check-all-login")
+    let loginPerson = document.querySelector(".loginmodal-bnt")
+    let logInButton = document.querySelector(".sign-log__button--login")
+    let loginNameee = document.querySelector(".navbar__list-items--signin-link")
+    console.log(loginPerson);
+    
+    logInModalClose.addEventListener("click",()=>
+    {
+        logInModal.style.display = "none"
+        checkAllLogIn.innerHTML ="<span></span>";
+    })
+
+
+    logInButton.addEventListener("click",()=>
+    {
+        logInModal.style.display ="block" ;
+    })
+    
+    loginPerson.addEventListener("click",()=>
+    {   
+        if (userPerson.length == 0 )
+        {
+            checkAllLogIn.innerHTML ="<span>You don't have acount . Sign up now !</span>"
+        }
+        else {
+        for (let index = 0; index < userPerson.length; index++) {
+            
+            
+            if (userPerson[index].user == logInUsersId.value && userPerson[index].pass== logInUserPass.value )
+            {
+                loginNameee.innerText = `${userPerson[index].name}`
+                checkAllLogIn.innerHTML ="<span></span>"
+                logInModal.style.display = "none"
+               
+            }
+            else 
+            {
+                checkAllLogIn.innerHTML ="<span>username or password wrong !</span>"
+            }
+        }
+        };
     })
