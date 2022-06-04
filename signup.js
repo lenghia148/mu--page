@@ -23,10 +23,8 @@
 
 
 
-    console.log(modalSignUp);
-    console.log(userId.value.length);
-    console.log(checkid);
-    console.log(userPerson);
+    console.log(checkpassword);
+   
     
     signUpModalClose.addEventListener("click",()=>
     {
@@ -79,8 +77,10 @@
         {
             checkpassword.innerHTML  = "<span>password less than 8 character</span>"
             check2=0;
+            
         }
         else {
+            
             checkpassword.style.display = "none";
             check2 =1;
         }
@@ -88,7 +88,7 @@
 
     confirmPass.addEventListener("change",() =>
     {
-        if(userPass.value!=confirmPass.value)
+        if(userPass.value !== confirmPass.value)
             {
                 confirmpassword.innerText =`Confirmpass is't like password `
             check3=0;
@@ -96,8 +96,9 @@
             }
         else
         {
+            
+            confirmpassword.style.display = "none";
             check3 =1;
-            confirmpassword.style.display = "none"
         }
     })
 
@@ -109,8 +110,9 @@
                 user : userId.value,
                 pass : userPass.value,
             })
+            alert("Sign up successfully!!!")
             modalSignUp.style.display = "none";
-            console.log(userPerson);
+            
         }
         else 
         {
