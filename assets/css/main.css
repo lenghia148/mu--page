@@ -1280,3 +1280,19 @@
     cursor: pointer;
 }
 
+.payment-button-clm 
+{
+    width:  50%;
+    height: 25px;
+    margin-left: 20%;
+    margin-top: 10px;
+    border: 1px solid black;
+
+}
+
+.payment-button-clm:hover
+{
+    cursor: pointer;
+    border: 1px solid rgb(191, 1, 1);
+}
+
